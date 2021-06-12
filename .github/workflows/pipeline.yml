@@ -1,0 +1,48 @@
+name: Deploy
+
+on:
+  pull_request:
+    branches:
+    - master
+
+  # Allows you to run this workflow manually from the Actions tab
+  #workflow_dispatch:
+
+jobs:
+  deploy:
+    name: 'Deploy'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: actions/setup-node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          
+      - name: Install Packages
+        uses: CultureHQ/actions-yarn@master
+        with:
+          args: install
+        
+      - name: Build App
+        uses: CultureHQ/actions-yarn@master
+        with:
+          args: build
+      
+      - name: Deploy App
+        uses: nwtgck/actions-netlify@v1.2
+        with:
+          publish-dir: './dist'
+          production-branch: master
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: false
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 1
