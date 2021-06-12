@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
     background-blend-mode: multiply;
 
     font-family: ${(props) => props.theme.font.main};
+    margin: 0;
   }
 `;
 
