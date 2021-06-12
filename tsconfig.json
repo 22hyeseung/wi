@@ -15,14 +15,8 @@
     "sourceMap": true,
     "skipLibCheck": true,
     "noEmit": true,
-    "baseUrl": ".",
-    "paths": {
-      "assets/*": ["src/assets/*"],
-      "components/*": ["src/components/*"],
-      "containers/*": ["src/containers/*"],
-      "styles/*":["src/styles/*"],
-      "types/*": ["types/*"]
-    },
+    "baseUrl": "src",
+    "typeRoots": ["./src/types", "./node_modules/@types"],
     "lib": ["dom", "es2015", "es2016"]
   },
   "exclude": ["artifacts/**/*", "dist/**/*", "public/**/*", "node_modules"]

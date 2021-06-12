@@ -2,7 +2,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Root, addPrefetchExcludes } from 'react-static';
 import { GlobalStyle } from 'styles/GlobalStyle';
-import GlobalFonts from 'styles/fonts'; //4-1
+import GlobalFonts from 'styles/fonts/index';
 import { theme } from 'styles/theme';
 import Main from 'components/Main';
 
