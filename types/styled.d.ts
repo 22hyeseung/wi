@@ -10,5 +10,9 @@ declare module 'styled-components' {
       background: string;
       text: string;
     };
+
+    font: {
+      main: string;
+    }
   }
 }
