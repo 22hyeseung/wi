@@ -10,7 +10,7 @@ const Title = styled.h1`
 function Main() {
   return (
     <div className='Main'>
-      <Title>결혼합니다</Title>
+      <Title>장진영 김동환</Title>
     </div>
   );
 }
