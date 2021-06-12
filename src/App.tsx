@@ -2,7 +2,9 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Root, addPrefetchExcludes } from 'react-static';
 import { GlobalStyle } from 'styles/GlobalStyle';
+import GlobalFonts from 'styles/fonts'; //4-1
 import { theme } from 'styles/theme';
+import Main from 'components/Main';
 
 // import './app.css';
 
@@ -13,9 +15,9 @@ function App() {
   return (
     <Root>
       <ThemeProvider theme={theme}>
-        <GlobalStyle theme={theme}>
-          <div className='content'></div>
-        </GlobalStyle>
+        <GlobalFonts />
+        <GlobalStyle theme={theme} />
+        <Main />
       </ThemeProvider>
     </Root>
   );
