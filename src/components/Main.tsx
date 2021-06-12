@@ -43,10 +43,11 @@ const MainImage = styled.div`
   background-size: cover;
   background-blend-mode: multiply;
   background-color: ${(props) => props.theme.colors.background};
+  filter: blur(0.3px);
 `;
 
 const Description = styled.p`
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
   line-height: 1.8;
   letter-spacing: 0.5px;
@@ -61,14 +62,13 @@ function Main() {
         <Box>
           <span>03</span>
           <span className='slash'></span>
-          <span>01</span>
+          <span>05</span>
         </Box>
         <Title>김동환</Title>
       </Header>
-      {/* <img src={main} alt='웨딩사진' /> */}
       <MainImage />
       <Description>
-        2022. 03. 05 토요일 오후 1시 40분
+        2022. 3. 5 토요일 오후 1시 40분
         <br />
         더뉴컨벤션웨딩홀
       </Description>
