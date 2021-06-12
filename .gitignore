@@ -1,0 +1,6 @@
+.DS_Store
+*.local
+
+artifacts/*
+dist/*
+node_modules/*
