@@ -5,6 +5,7 @@ import { GlobalStyle } from 'styles/GlobalStyle';
 import GlobalFonts from 'styles/fonts/index';
 import { theme } from 'styles/theme';
 import Main from 'components/Main';
+import Intro from 'components/Intro';
 
 // import './app.css';
 
@@ -18,6 +19,7 @@ function App() {
         <GlobalFonts />
         <GlobalStyle theme={theme} />
         <Main />
+        <Intro />
       </ThemeProvider>
     </Root>
   );
